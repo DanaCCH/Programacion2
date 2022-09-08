@@ -125,6 +125,16 @@ def multiplos(n1, n2):
                 i = i + 1
     return(l)
 #print(conWhile())
+def conWhile(a, b):
+    a = int(input("Ingrese el primer numero: "))
+    b = int(input("Ingrese el segundo numero que sea mayor que el primero: "))
+    cant_multiplos = 0
+    iterador = a
+    while(iterador <= b):
+        cant_multiplos += 1
+        iterador += a
+    
+    print(iterador)
 
 #Ejercicio 12: Manejo de contraseñas
 # a) Escribir un programa que contenga una contraseña inventada, que le pregunte al usuario la contraseña, y no le permita continuar hasta que la haya ingresado correctamente.
@@ -147,17 +157,15 @@ def contraseña_Intentos():
         intento += 1
         msj = input("Ingrese la contraseña: ")
 
-#def contraseñaBoolean():
-    Programacion2 = False
-    msj = input("Ingrese la contraseña: ")
+def contraseñaBoolean():
+    contraseña = "Programacion2"
     intento = 0
-    while (not Programacion2 and not intento == 2):
-        print("Contraseña Incorrecta")
+    msj = input("Ingrese la contraseña: ")
+    while (contraseña != msj and intento < 2):
         intento += 1
-        if msj == "Programacion2":
-            Programacion2 = True
-        else:
-            print(msj)
+        msj = (input("Contraseña Incorrecta, intente nuevamente: "))
+        return False
+    return True
 
 #Ejercicio 13:
 #Escriba una función que reciba un número natural e imprima todos los números primos que hay hasta ese número. Para esto se pide que:
